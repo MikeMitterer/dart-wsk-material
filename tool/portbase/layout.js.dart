@@ -264,6 +264,10 @@ void init() {
       }
     }
 
+    final eatEvent = function(ev) {
+      ev.preventDefault();
+    }
+
     // Add drawer toggling button to our layout, if we have an openable drawer.
     if (_drawer) {
 
@@ -292,6 +296,8 @@ void init() {
       // not be present.
       element.classes.add(_cssClasses.HAS_DRAWER);
 
+      _drawer.addEventListener('mousewheel', eatEvent);
+
       // If we have a fixed header, add the button to the header rather than
       // the layout.
       if (element.classes.contains(_cssClasses.FIXED_HEADER)) {
@@ -308,6 +314,7 @@ void init() {
 	// .addEventListener('click', -> .onClick.listen(<MouseEvent>);
       obfuscator.onClick.listen(
           _drawerToggleHandler);
+      obfuscator.addEventListener('mousewheel', eatEvent);
     }
 
     // Initialize tabs, if any.

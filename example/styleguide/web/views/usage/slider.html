@@ -40,25 +40,33 @@ main() &#123;
                     More about <a href="/#/theming">theming...</a>
                 </div>
                 <pre class="prettyprint linenums lang-html">
-  &lt;div class=&quot;demo-preview-block&quot;&gt;
-      &lt;p&gt;
-          &lt;input class=&quot;mdl-slider mdl-js-slider&quot; type=&quot;range&quot;
-                 min=&quot;0&quot; max=&quot;100&quot; value=&quot;0&quot; tabindex=&quot;0&quot;&#47;&gt;
-      &lt;&#47;p&gt;
-      &lt;p&gt;
-          &lt;input id=&quot;slider2&quot; class=&quot;mdl-slider mdl-js-slider&quot; type=&quot;range&quot;
-                 min=&quot;0&quot; max=&quot;100&quot; value=&quot;10&quot; tabindex=&quot;0&quot;&#47;&gt;
-      &lt;&#47;p&gt;
-      &lt;p&gt;
-          &lt;input class=&quot;mdl-slider mdl-js-slider&quot; type=&quot;range&quot;
-                 min=&quot;0&quot; max=&quot;100&quot; value=&quot;0&quot; tabindex=&quot;0&quot; disabled&#47;&gt;
-      &lt;&#47;p&gt;
-      &lt;p&gt;
-          &lt;input id=&quot;slider4&quot; class=&quot;mdl-slider mdl-js-slider&quot; type=&quot;range&quot;
-                 min=&quot;0&quot; max=&quot;100&quot; value=&quot;10&quot; tabindex=&quot;0&quot; disabled&#47;&gt;
-      &lt;&#47;p&gt;
-      Drag slider 2 - this will move slider 4
-  &lt;&#47;div&gt;
+&lt;div class=&quot;demo-preview-block&quot;&gt;
+    &lt;style&gt;
+        .demo-slider__slider-default  {
+        }
+    &lt;&#47;style&gt;
+    &lt;p class=&quot;demo-slider__slider-default&quot;&gt;
+        &lt;input class=&quot;mdl-slider mdl-js-slider&quot; type=&quot;range&quot;
+               min=&quot;0&quot; max=&quot;100&quot; value=&quot;0&quot; tabindex=&quot;0&quot;&#47;&gt;
+    &lt;&#47;p&gt;
+    &lt;style&gt;
+        .demo-slider__slider-starting-value  {
+        }
+    &lt;&#47;style&gt;
+    &lt;p class=&quot;demo-slider__slider-starting-value&quot;&gt;
+        &lt;input id=&quot;slider2&quot; class=&quot;mdl-slider mdl-js-slider&quot; type=&quot;range&quot;
+               min=&quot;0&quot; max=&quot;100&quot; value=&quot;25&quot; tabindex=&quot;0&quot;&#47;&gt;
+    &lt;&#47;p&gt;
+    &lt;p class=&quot;demo-slider__slider-disabled&quot;&gt;
+        &lt;input class=&quot;mdl-slider mdl-js-slider&quot; type=&quot;range&quot;
+               min=&quot;0&quot; max=&quot;100&quot; value=&quot;0&quot; tabindex=&quot;0&quot; disabled&#47;&gt;
+    &lt;&#47;p&gt;
+    &lt;p class=&quot;demo-slider__slider-data-binding&quot;&gt;
+        &lt;input id=&quot;slider4&quot; class=&quot;mdl-slider mdl-js-slider&quot; type=&quot;range&quot;
+               min=&quot;0&quot; max=&quot;100&quot; value=&quot;25&quot; tabindex=&quot;0&quot; disabled&#47;&gt;
+    &lt;&#47;p&gt;
+    Drag slider 2 - this will move slider 4
+&lt;&#47;div&gt;
 </pre>
                 </div>
                 <!-- CSS-Tab -->

@@ -265,6 +265,8 @@ class MaterialLayout extends MdlComponent {
                 // not be present.
                 element.classes.add(_cssClasses.HAS_DRAWER);
 
+                //_drawer.onMouseWheel.listen(_eatEvent);
+
                 // If we have a fixed header, add the button to the header rather than
                 // the layout.
                 if (element.classes.contains(_cssClasses.FIXED_HEADER)) {
@@ -285,6 +287,7 @@ class MaterialLayout extends MdlComponent {
                 element.append(obfuscator);
 
                 obfuscator.onClick.listen( _drawerToggleHandler );
+                obfuscator.onMouseWheel.listen(_eatEvent);
             }
 
             // Initialize tabs, if any.
@@ -437,6 +440,10 @@ class MaterialLayout extends MdlComponent {
         for (int j = 0; j < panels.length; j++) {
             panels[j].classes.remove(_cssClasses.IS_ACTIVE);
         }
+    }
+
+    void _eatEvent(final dom.Event event) {
+        event.preventDefault();
     }
 }
 
